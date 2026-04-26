@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScreenPilot - Screen-Aware Task Automation</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body>
+
+<!-- STICKY NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <h2>ScreenPilot</h2>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#overview" class="nav-link">Overview</a></li>
+      <li><a href="#domain" class="nav-link">Domain</a></li>
+      <li><a href="#milestones" class="nav-link">Milestones</a></li>
+      <li><a href="#documents" class="nav-link">Documents</a></li>
+      <li><a href="#presentations" class="nav-link">Presentations</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<header class="hero" id="home">
+  <div class="hero-content">
+    <h1>ScreenPilot</h1>
+    <p class="hero-subtitle">A Human-Like Agent for Screen-Aware Task Automation</p>
+    <p class="hero-description">Intelligent automation that sees and acts on screens without system access</p>
+    <a href="#overview" class="cta-button">Learn More</a>
+  </div>
+</header>
+
+<!-- PROJECT OVERVIEW SECTION -->
+<section id="overview" class="content-section">
+  <div class="container">
+    <h2>Project Overview</h2>
+    <div class="overview-grid">
+      <div class="card">
+        <h3>What is ScreenPilot?</h3>
+        <p>ScreenPilot is an innovative AI system that observes screens using computer vision and performs automated actions through HID (Human Interface Device) commands without requiring direct system access.</p>
+      </div>
+      <div class="card">
+        <h3>Key Features</h3>
+        <ul>
+          <li>Visual screen observation and analysis</li>
+          <li>Autonomous task automation</li>
+          <li>No direct system access required</li>
+          <li>Human-like interaction patterns</li>
+          <li>Closed-loop feedback system</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN SECTION -->
+<section id="domain" class="content-section alt-bg">
+  <div class="container">
+    <h2>Research Domain</h2>
+    
+    <div class="domain-box">
+      <h3>Literature Survey</h3>
+      <p>Traditional UI automation tools such as Selenium and Appium rely heavily on DOM structures, APIs, or system-level access. While these tools are effective in controlled environments, they struggle in dynamic or black-box systems where internal structures are not accessible. Recent advancements in AI-based automation introduce vision-based approaches using computer vision and OCR to interpret UI elements.</p>
+      <p>However, most existing solutions lack real-time adaptability and fail to validate whether actions are successfully executed. Additionally, they depend on predefined scripts, making them fragile when UI changes occur.</p>
+    </div>
+
+    <div class="domain-box">
+      <h3>Research Gap</h3>
+      <p>Current automation systems lack a fully integrated closed-loop mechanism that combines perception, decision-making, execution, and validation. There is a significant gap in systems that can:</p>
+      <ul>
+        <li>Operate without APIs or system-level access</li>
+        <li>Understand UI dynamically using visual input</li>
+        <li>Validate execution using real-time feedback</li>
+        <li>Adapt to unexpected UI changes automatically</li>
+      </ul>
+    </div>
+
+    <div class="domain-box">
+      <h3>Research Problem</h3>
+      <p><strong>Challenge:</strong> How can an intelligent system autonomously observe a screen, interpret user interface elements, execute actions, and verify outcomes in real-time without relying on system-level access or predefined scripts?</p>
+    </div>
+
+    <h3 style="margin-top: 40px;">Research Objectives</h3>
+    <div class="objectives-grid">
+      <div class="objective-card">
+        <h4>🎯 Design & Decision Making</h4>
+        <p>Design an Agentic AI system capable of autonomous decision-making</p>
+      </div>
+      <div class="objective-card">
+        <h4>👁️ Vision Module</h4>
+        <p>Develop a vision module to detect and interpret UI elements using OCR and image processing</p>
+      </div>
+      <div class="objective-card">
+        <h4>⚙️ Actuation</h4>
+        <p>Implement HID-based actuation for real-world interaction</p>
+      </div>
+      <div class="objective-card">
+        <h4>🔄 Feedback Loop</h4>
+        <p>Enable a closed-loop feedback mechanism for validation and error correction</p>
+      </div>
+      <div class="objective-card">
+        <h4>🌐 Adaptability</h4>
+        <p>Ensure adaptability to dynamic and unknown environments</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 40px; margin-bottom: 30px;">Methodology - Closed-Loop Architecture</h3>
+    <div class="methodology-container">
+      <div class="methodology-step">
+        <div class="step-number">1</div>
+        <h4>Perceive</h4>
+        <p>Capture screen using a camera and extract UI elements using OCR</p>
+      </div>
+      <div class="methodology-arrow">→</div>
+      <div class="methodology-step">
+        <div class="step-number">2</div>
+        <h4>Plan</h4>
+        <p>Generate action plans using a Large Language Model</p>
+      </div>
+      <div class="methodology-arrow">→</div>
+      <div class="methodology-step">
+        <div class="step-number">3</div>
+        <h4>Act</h4>
+        <p>Execute actions using HID (keyboard/mouse emulation)</p>
+      </div>
+      <div class="methodology-arrow">→</div>
+      <div class="methodology-step">
+        <div class="step-number">4</div>
+        <h4>Evaluate</h4>
+        <p>Re-capture the screen to verify if the action was successful</p>
+      </div>
+    </div>
+    <p style="text-align: center; color: var(--text-light); margin-top: 30px; font-style: italic;">This loop continues until the task is successfully completed, enabling adaptive behavior.</p>
+
+    <h3 style="margin-top: 50px;">Technologies Used</h3>
+    <div class="tech-stack">
+      <span class="tech-tag">🐍 Python</span>
+      <span class="tech-tag">🖼️ OpenCV</span>
+      <span class="tech-tag">📝 Tesseract OCR</span>
+      <span class="tech-tag">🧠 LLM (Mistral/LLaMA)</span>
+      <span class="tech-tag">⌨️ ESP32 HID</span>
+    </div>
+
+    <h3 style="margin-top: 40px;">Expected Outcomes</h3>
+    <div class="outcomes-grid">
+      <div class="outcome-item">
+        <h4>✅ Working Prototype</h4>
+        <p>Fully functional screen-aware automation system</p>
+      </div>
+      <div class="outcome-item">
+        <h4>✅ Closed-Loop Validation</h4>
+        <p>Real-time feedback with robust retry mechanism</p>
+      </div>
+      <div class="outcome-item">
+        <h4>✅ Superior Robustness</h4>
+        <p>Improved performance compared to traditional automation tools</p>
+      </div>
+      <div class="outcome-item">
+        <h4>✅ Black-Box Capability</h4>
+        <p>Ability to perform tasks in restricted environments</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES SECTION -->
+<section id="milestones" class="content-section">
+  <div class="container">
+    <h2>Project Evaluation & Milestones</h2>
+
+
+    <h3 style="margin-top: 50px; margin-bottom: 30px; text-align: center;">Evaluation Breakdown</h3>
+    
+    <div class="timeline">
+      <!-- Phase 1: Proposal -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Proposal Phase</h3>
+          <div class="milestone-breakdown">
+            <div class="milestone-sub">
+              <span class="sub-title">Proposal Presentation</span>
+              <span class="sub-marks">6%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Proposal Report</span>
+              <span class="sub-marks">6%</span>
+            </div>
+          </div>
+          <p class="phase-total">Phase Total: <strong>12%</strong></p>
+        </div>
+      </div>
+
+      <!-- Phase 2: Progress -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Progress Phase</h3>
+          <div class="milestone-breakdown">
+            <div class="milestone-sub">
+              <span class="sub-title">Progress Presentation 1 (50%)</span>
+              <span class="sub-marks">15%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Progress Presentation 2 (90%)</span>
+              <span class="sub-marks">18%</span>
+            </div>
+          </div>
+          <p class="phase-total">Phase Total: <strong>33%</strong></p>
+        </div>
+      </div>
+
+      <!-- Phase 3: Final Submission -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Final Submission Phase</h3>
+          <div class="milestone-breakdown">
+            <div class="milestone-sub">
+              <span class="sub-title">Final Report (Individual)</span>
+              <span class="sub-marks">15%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Final Report (Group)</span>
+              <span class="sub-marks">4%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Research Paper</span>
+              <span class="sub-marks">10%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Website</span>
+              <span class="sub-marks">2%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Checklists</span>
+              <span class="sub-marks">2%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Logbook</span>
+              <span class="sub-marks">2%</span>
+            </div>
+          </div>
+          <p class="phase-total">Phase Total: <strong>35%</strong></p>
+        </div>
+      </div>
+
+      <!-- Phase 4: Evaluation -->
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Evaluation Phase</h3>
+          <div class="milestone-breakdown">
+            <div class="milestone-sub">
+              <span class="sub-title">Final Presentation</span>
+              <span class="sub-marks">10%</span>
+            </div>
+            <div class="milestone-sub">
+              <span class="sub-title">Viva (Oral Defense)</span>
+              <span class="sub-marks">10%</span>
+            </div>
+          </div>
+          <p class="phase-total">Phase Total: <strong>20%</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="marks-distribution">
+      <h3 style="margin-top: 50px; margin-bottom: 30px; text-align: center;">Marks Distribution Overview</h3>
+      <div class="distribution-grid">
+        <div class="distribution-card">
+          <div class="dist-icon">📋</div>
+          <h4>Presentations</h4>
+          <p class="dist-percentage">49%</p>
+          <p class="dist-items">Proposal, Progress 1 & 2, Final</p>
+        </div>
+        <div class="distribution-card">
+          <div class="dist-icon">📄</div>
+          <h4>Reports & Papers</h4>
+          <p class="dist-percentage">37%</p>
+          <p class="dist-items">Proposal, Final, Research Paper</p>
+        </div>
+        <div class="distribution-card">
+          <div class="dist-icon">🛠️</div>
+          <h4>Documentation</h4>
+          <p class="dist-percentage">6%</p>
+          <p class="dist-items">Website, Checklists, Logbook</p>
+        </div>
+        <div class="distribution-card">
+          <div class="dist-icon">🎤</div>
+          <h4>Oral Defense</h4>
+          <p class="dist-percentage">8%</p>
+          <p class="dist-items">Viva + Group Report</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENTS SECTION -->
+<section id="documents" class="content-section alt-bg">
+  <div class="container">
+    <h2>Project Documents</h2>
+    
+    <!-- Planning & Setup Documents -->
+    <h3 class="doc-category">Planning & Setup</h3>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <h3>📋 Project Charter & TAF</h3>
+        <p>Project charter defining scope, objectives, and key deliverables</p>
+        <a href="assets/docs/TAF_25-26J-477   -updated.pdf" class="resource-link" target="_blank">View Document →</a>
+      </div>
+      <div class="resource-card">
+        <h3>📝 Proposal Document</h3>
+        <p>Detailed project proposal with objectives and methodology</p>
+        <a href="assets/docs/IT22125248_Proposal_Report.pdf" class="resource-link" target="_blank">View Document →</a>
+      </div>
+    </div>
+
+    <!-- Checklists -->
+    <h3 class="doc-category">Checklists</h3>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <h3>✅ Checklist Document 1</h3>
+        <p>Progress tracking and milestone checklist</p>
+        <a href="assets/docs/check1.txt" class="resource-link" target="_blank">View Document →</a>
+      </div>
+      <div class="resource-card">
+        <h3>✅ Checklist Document 2</h3>
+        <p>Quality assurance and testing checklist</p>
+        <a href="assets/docs/check2.txt" class="resource-link" target="_blank">View Document →</a>
+      </div>
+      <div class="resource-card">
+        <h3>✅ Checklist Document 3</h3>
+        <p>Final submission and deliverables checklist</p>
+        <a href="assets/docs/deploment_report.pdf" class="resource-link" target="_blank">View Document →</a>
+      </div>
+    </div>
+
+    <!-- Individual Reports -->
+    <h3 class="doc-category">Individual Reports</h3>
+    <div class="team-reports-grid">
+      <div class="report-card">
+        <div class="report-header">
+          <h4>S. Annesiyani</h4>
+          <span class="reg-number">IT22125248</span>
+        </div>
+        <p>Individual research report and contributions</p>
+        <a href="assets/docs/IT22125248- Draft Final thesis.pdf" class="resource-link" target="_blank">View Report →</a>
+      </div>
+      <div class="report-card">
+        <div class="report-header">
+          <h4>Hemapriya H. A. N. S</h4>
+          <span class="reg-number">IT22099518</span>
+        </div>
+        <p>Individual research report and contributions</p>
+        <a href="assets/docs/IT22099518- Draft Final thesis.pdf" class="resource-link" target="_blank">View Report →</a>
+      </div>
+      <div class="report-card">
+        <div class="report-header">
+          <h4>H.I.G. Amith Hasintha</h4>
+          <span class="reg-number">IT22167378</span>
+        </div>
+        <p>Individual research report and contributions</p>
+        <a href="assets/docs/IT22167378- Draft Final thesis.pdf" class="resource-link" target="_blank">View Report →</a>
+      </div>
+      <div class="report-card">
+        <div class="report-header">
+          <h4>E.K.K. Tharushi</h4>
+          <span class="reg-number">IT22083296</span>
+        </div>
+        <p>Individual research report and contributions</p>
+        <a href="assets/docs/IT22083296- Draft Final thesis.pdf" class="resource-link" target="_blank">View Report →</a>
+      </div>
+    </div>
+
+    <!-- Final Documents -->
+    <h3 class="doc-category">Final Submission</h3>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <h3>📊 Final Document</h3>
+        <p>Comprehensive final report with all findings and recommendations</p>
+        <a href="assets/docs/group thesis.pdf" class="resource-link" target="_blank">View Document →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRESENTATIONS SECTION -->
+<section id="presentations" class="content-section alt-bg">
+  <div class="container">
+    <h2>Project Presentations</h2>
+
+    <div class="presentations-showcase">
+      <div class="presentation-item">
+        <div class="presentation-card">
+          <div class="presentation-header">
+            <div class="presentation-number">1</div>
+            <div class="presentation-phase">Proposal Phase</div>
+          </div>
+          <h3>Proposal Presentation</h3>
+          <p>Initial project scope, objectives, and research methodology</p>
+          <div class="presentation-meta">
+            <span class="presentation-type">📋 Initial Presentation</span>
+          </div>
+          <a href="assets/slides/25-26J-477.pdf" class="presentation-link" target="_blank">View Presentation →</a>
+        </div>
+      </div>
+
+      <div class="presentation-item">
+        <div class="presentation-card">
+          <div class="presentation-header">
+            <div class="presentation-number">2</div>
+            <div class="presentation-phase">Progress Phase</div>
+          </div>
+          <h3>Progress Presentation 1</h3>
+          <p>First progress update - 50% project completion</p>
+          <div class="progress-indicator">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 50%"></div>
+            </div>
+            <span class="progress-label">50% Complete</span>
+          </div>
+          <a href="assets/slides/pp1-presentation.pdf" class="presentation-link" target="_blank">View Presentation →</a>
+        </div>
+      </div>
+
+      <div class="presentation-item">
+        <div class="presentation-card">
+          <div class="presentation-header">
+            <div class="presentation-number">3</div>
+            <div class="presentation-phase">Progress Phase</div>
+          </div>
+          <h3>Progress Presentation 2</h3>
+          <p>Second progress update - 90% project completion</p>
+          <div class="progress-indicator">
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 90%"></div>
+            </div>
+            <span class="progress-label">90% Complete</span>
+          </div>
+          <a href="assets/slides/pp2-presentation.pdf" class="presentation-link" target="_blank">View Presentation →</a>
+        </div>
+      </div>
+
+      <div class="presentation-item">
+        <div class="presentation-card">
+          <div class="presentation-header">
+            <div class="presentation-number">4</div>
+            <div class="presentation-phase">Final Phase</div>
+          </div>
+          <h3>Final Presentation</h3>
+          <p>Complete project results and outcomes</p>
+          <div class="presentation-meta">
+            <span class="presentation-type">🎯 Final Results</span>
+          </div>
+          <a href="assets/slides/final-presentation.pdf" class="presentation-link" target="_blank">View Presentation →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="content-section alt-bg">
+  <div class="container">
+    <h2>About Us</h2>
+
+    <!-- SUPERVISORS SECTION -->
+    <div class="supervisors-section">
+      <h3 class="section-title">Project Supervisors</h3>
+      <div class="supervisors-grid">
+        <div class="supervisor-card">
+          <div class="supervisor-role">Supervisor</div>
+          <h4>Vishan Jayasinghearachchi</h4>
+          <p class="supervisor-title">Senior Lecturer</p>
+          <p class="supervisor-email">📧 vishan.j@sliit.lk</p>
+          <p class="supervisor-institution">Sri Lanka Institute of Information Technology (SLIIT)</p>
+        </div>
+        <div class="supervisor-card">
+          <div class="supervisor-role">Co-Supervisor</div>
+          <h4>Kaushalya Rajapakse</h4>
+          <p class="supervisor-title">Lecturer</p>
+          <p class="supervisor-email">📧 kaushalya.r@sliit.lk</p>
+          <p class="supervisor-institution">Sri Lanka Institute of Information Technology (SLIIT)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM MEMBERS SECTION -->
+    <div class="team-section">
+      <h3 class="section-title">Research Team</h3>
+      <div class="team-members-grid">
+        <div class="team-member-card">
+          <img src="assets/images/siyani.jpeg" alt="Annesiyani Srikanthan" class="member-avatar">
+          <h4>Annesiyani Srikanthan</h4>
+          <p class="member-role">Research Team Member</p>
+          <p class="member-email">📧 it22125248@my.sliit.lk</p>
+          <a href="https://github.com/siyani-sri" class="member-github" target="_blank">🐙 GitHub Profile</a>
+           </div>
+
+        <div class="team-member-card">
+          <img src="assets/images/new1.jpg.jpeg" alt="Hemapriya H. A. N. S" class="member-avatar">
+          <h4>Hemapriya H. A. N. S</h4>
+          <p class="member-role">Research Team Member</p>
+          <p class="member-email">📧 it22099518@my.sliit.lk</p>
+          <a href="https://github.com/nuwani-sithara" class="member-github" target="_blank">🐙 GitHub Profile</a>
+          </div>
+
+        <div class="team-member-card">
+          <img src="assets/images/Amith Hasintha.png" alt="H.I.G. Amith Hasintha" class="member-avatar">
+          <h4>H.I.G. Amith Hasintha</h4>
+          <p class="member-role">Research Team Member</p>
+          <p class="member-email">📧 it22167378@my.sliit.lk</p>
+          <a href="https://github.com/amith-hasintha" class="member-github" target="_blank">🐙 GitHub Profile</a>
+          </div>
+
+        <div class="team-member-card">
+          <img src="assets/images/imagecopy.jpg.jpeg" alt="E.K.K. Tharushi Nethmini Edirisinghe" class="member-avatar">
+          <h4>E.K.K. Tharushi Nethmini Edirisinghe</h4>
+          <p class="member-role">Research Team Member</p>
+          <p class="member-email">📧 it22083296@my.sliit.lk</p>
+          <a href="https://github.com/Tharushi-Nethmini" class="member-github" target="_blank">🐙 GitHub Profile</a>
+           </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="content-section contact-section">
+  <div class="container">
+    <h2>Get In Touch</h2>
+    <p class="contact-intro">Have questions about ScreenPilot? We'd love to hear from you!</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      </div>
+      <div class="form-group">
+        <textarea id="message" name="message" placeholder="Your Message" rows="6" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn" id="submitBtn">
+        <span id="btnText">Send Message</span>
+        <span id="btnLoading" style="display: none;">Sending...</span>
+      </button>
+      <div id="formMessage" class="form-message" style="display: none;"></div>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 ScreenPilot. All rights reserved. | Final Year Research Project</p>
+  </div>
+</footer>
+
+<script src="js/smooth-scroll.js"></script>
+
+</body>
+</html>
