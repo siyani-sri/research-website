@@ -42,7 +42,7 @@ window.addEventListener('scroll', () => {
 // Contact Form Functionality using EmailJS
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize EmailJS with your public key
-  emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual EmailJS public key
+  emailjs.init('G9ATQzApG2rzgU8lX'); // Replace with your actual EmailJS public key
 
   const contactForm = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
@@ -64,13 +64,11 @@ document.addEventListener('DOMContentLoaded', function() {
         from_name: document.getElementById('name').value,
         from_email: document.getElementById('email').value,
         subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value,
-        to_email: 'it22125248@my.sliit.lk',
-        reply_to: document.getElementById('email').value
+        message: document.getElementById('message').value
       };
 
       // Send email using EmailJS
-      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData) // Replace with your actual service and template IDs
+      emailjs.send('service_ip68u4m', 'template_unbwfhe', formData) // Replace with your actual service and template IDs
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
 
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // Show error message
           formMessage.style.display = 'block';
           formMessage.className = 'form-message error';
-          formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly at it22125248@my.sliit.lk';
+          formMessage.textContent = 'Sorry, there was an error sending your message. Please try again or contact us directly at subashinisrikanthan@gmail.com';
 
           // Hide message after 5 seconds
           setTimeout(() => {
